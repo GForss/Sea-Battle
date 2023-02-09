@@ -44,9 +44,9 @@ form input {
 }
 
 .hit {
-    background: url(/img/ship.png) no-repeat center center;
+    background: url(../img/ship.png) no-repeat center center;
 }
 
 .miss {
-    background: url(/img/miss.png) no-repeat center center;
+    background: url(../img/miss.png) no-repeat center center;
 }
