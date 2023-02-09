@@ -69,11 +69,11 @@ let model = {
         let row, col;
 
         if(direction === 1){
-            row =Math.floor(Math.random() * this.boardSize);
-            col =Math.floor(Math.random() * (this.boardSize - this.shipLength));
+            row = Math.floor(Math.random() * this.boardSize);
+            col = Math.floor(Math.random() * (this.boardSize - this.shipLength));
         } else {
-            row =Math.floor(Math.random() * this.boardSize - (this.shipLength));
-            col =Math.floor(Math.random() * this.boardSize);
+            row = Math.floor(Math.random() * (this.boardSize - this.shipLength));
+            col = Math.floor(Math.random() * this.boardSize);
         }
 
         let newShipLocations = [];
@@ -129,7 +129,7 @@ function parseGuess(guess) {
 
         if(isNaN(row) || isNaN(column)) {
             alert("Ошибка");
-        } else if (row < 0 || row >= model.boardSize || column < 0 || column >= model.boardSize) {
+        } else if (row < 0 || row >= model.boardSize || column < 0 || column <= model.boardSize) {
             alert("Ошибка");
         } else {
             return row + column;
