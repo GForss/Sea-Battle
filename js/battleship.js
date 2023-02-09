@@ -129,7 +129,7 @@ function parseGuess(guess) {
 
         if(isNaN(row) || isNaN(column)) {
             alert("Ошибка");
-        } else if (row < 0 || row >= model.boardSize || column < 0 || column <= model.boardSize) {
+        } else if (row < 0 || row >= model.boardSize || column < 0 || column >= model.boardSize) {
             alert("Ошибка");
         } else {
             return row + column;
